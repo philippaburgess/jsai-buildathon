@@ -1,3 +1,5 @@
+// Endpoint: chat/completions
+
 import dotenv from 'dotenv';
 import { AzureKeyCredential } from '@azure/core-auth';
 import { OpenAIClient } from '@azure/openai';
