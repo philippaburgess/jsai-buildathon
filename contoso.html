@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sc
+ale=1.0">
+    <title>Contoso Outdoor Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contoso Outdoor Company</h1>
+    </header>
+    <main>
+        <section class="products">
+            <h2>Tents</h2>
+            <ul class="product-list">
+                <li class="product">
+                    <h3>TrailMaster X4 Tent</h3>
+                    <p>$200</p>
+                </li>
+                <li class="product">
+                    <h3>Alpine Explorer Tent</h3>
+                    <p>$300</p>
+                </li>
+                <li class="product">
+                    <h3>SkyView 2-Person Tent</h3>
+                    <p>$380</p>
+                </li>
+            </ul>
+        </section>
+        <section class="products">
+            <h2>Backpacks</h2>
+            <ul class="product-list">
+                <li class="product">
+                    <h3>Adventurer Pro Backpack</h3>
+                    <p>$60</p>
+                </li>
+                <li class="product">
+                    <h3>Summit Climber Backpack</h3>
+                    <p>$70</p>
+                </li>
+                <li class="product">
+                    <h3>TrailLite DayPack</h3>
+                    <p>$40</p>
+                </li>
+            </ul>
+        </section>
+        <section class="products">
+            <h2>Hiking Clothing</h2>
+            <ul class="product-list">
+                <li class="product">
+                    <h3>Summit Breeze Jacket</h3>
+                    <p>$60</p>
+                </li>
+                <li class="product">
+                    <h3>Trail Blaze Pants</h3>
+                    <p>$80</p>
+                </li>
+                <li class="product">
+                    <h3>TreeStar Boots</h3>
+                    <p>$120</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
+```
+
+### CSS
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.products {
+    margin-bottom: 2em;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 20%;
+}
+
+.product h3 {
+    margin-top: 0;
+}
+
+.product p {
+    margin-bottom: 0;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .product {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}
+
