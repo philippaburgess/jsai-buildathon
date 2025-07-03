@@ -58,8 +58,10 @@ module webapp 'br/public:avm/res/web/static-site:0.7.0' = {
   params: {
     name: webappName
     location: webappLocation
-    tags: union(tags, { 'azd-service-name': 'webapi' })
     sku: 'Standard'
+    tags: union(tags, {
+      'azd-service-name': 'webapp'  // ✅ Correctly tagged
+    })
   }
 }
 
@@ -78,7 +80,9 @@ module webapi 'br/public:avm/res/web/site:0.15.1' = {
   params: {
     kind: 'app'
     name: webapiName
-    tags: union(tags, { 'azd-service-name': webapiName })
+    tags: union(tags, {
+      'azd-service-name': 'webapi'  // ✅ Correctly tagged
+    })
     serverFarmResourceId: serverfarm.outputs.resourceId
   }
 }

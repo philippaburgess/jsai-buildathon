@@ -3,7 +3,6 @@ metadata:
   template: azd-init@1.14.0
 services:
   webapp:
-    name: webapp
     project: packages/webapp
     host: staticwebapp
     language: js
@@ -17,8 +16,7 @@ services:
           shell: sh
           run: npm run build
 
-  webapi:
-    name: webapi           # 👈 This is the key fix
+webapi:
     project: packages/webapi
     host: appservice
     language: js
