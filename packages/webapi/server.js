@@ -1,3 +1,5 @@
+import { AgentService } from "./agentService.js";
+
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -97,11 +99,23 @@ function getSessionMemory(sessionId) {
   return sessionMemories[sessionId];
 }
 
+const agentService = new AgentService();
+
 // POST /chat endpoint with RAG + memory
 app.post("/chat", async (req, res) => {
   const userMessage = req.body.message;
   const useRAG = req.body.useRAG ?? true;
   const sessionId = req.body.sessionId || "default";
+  const mode = req.body.mode || "basic";
+
+// If agent mode is selected, route to agent service
+if (mode === "agent") {
+  const agentResponse = await agentService.processMessage(sessionId, userMessage);
+  return res.json({
+    reply: agentResponse.reply,
+    sources: []
+  });
+}
 
   let sources = [];
 

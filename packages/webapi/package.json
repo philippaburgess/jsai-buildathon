@@ -27,6 +27,8 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@azure/ai-projects": "^1.0.0-beta.8",
+    "@azure/identity": "^4.10.2",
     "@langchain/azure-openai": "^0.0.10",
     "@langchain/openai": "^0.5.16",
     "cors": "^2.8.5",

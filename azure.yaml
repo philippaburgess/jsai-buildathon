@@ -16,7 +16,8 @@ services:
           shell: sh
           run: npm run build
 
-webapi:
+  webapi:
     project: packages/webapi
     host: appservice
     language: js
+    name: jsai-chatapi-quest6  
