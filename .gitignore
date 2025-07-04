@@ -407,12 +407,6 @@ FodyWeavers.xsd
 .env
 .azure
 
-# Ignore AI agent config and environment secrets
-packages/agent/
-*.agent.yaml
-
 !packages/webapi/
 !packages/webapi/package.json
 !packages/webapi/package-lock.json
-!packages/node-os-mpc/
-!packages/node-os-mpc/**

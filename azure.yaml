@@ -21,3 +21,11 @@ services:
     host: appservice
     language: js
     name: jsai-chatapi-quest6  
+
+  node-os-mcp:
+    host: devcontainer
+    language: ts
+    project: packages/node-os-mpc
+    run: 
+      command: npx tsx src/index.ts
+      shell: pwsh
