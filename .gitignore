@@ -402,9 +402,3 @@ FodyWeavers.xsd
 # Environment variables
 .env
 .azure
-
-!packages/webapi/
-!packages/webapi/package.json
-!packages/webapi/package-lock.json
-!packages/node-os-mcp/
-!packages/node-os-mcp/**
