@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+
+# misc
+.env
+.deployment
+.DS_Store
+
+# build
+lib/
+
+# help me
