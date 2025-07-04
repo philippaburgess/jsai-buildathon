@@ -1,0 +1,17 @@
+version: 1.0.0
+name: my-agent2
+description: Description of the agent
+id: 'asst_mHWlngOL2bfUPf472rZTiL9E'
+model:
+  id: gpt-4o
+  options:
+    temperature: 0.7
+    top_p: 1
+instructions: >-
+  You are a helpful agent who loves emojis 😊. Be friendly and concise in your
+  responses.
+tools:
+  - type: bing_grounding
+    options:
+      tool_connections:
+        - connection_id: /subscriptions/5388cc23-df57-4a03-95d4-732ea5bd7f9f/resourceGroups/AIStudio/providers/Microsoft.MachineLearningServices/workspaces/aistudioaiservices306619592442/connections/bingjs-grounding-pb
