@@ -25,7 +25,7 @@ services:
   node-os-mcp:
     host: devcontainer
     language: ts
-    project: packages/node-os-mpc
+    project: packages/node-os-mcp
     run: 
       command: npx tsx src/index.ts
       shell: pwsh
