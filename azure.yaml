@@ -24,8 +24,7 @@ services:
 
   node-os-mcp:
     host: devcontainer
-    language: ts
+    language: js
     project: packages/node-os-mcp
     run: 
-      command: npx tsx src/index.ts
-      shell: "C:/Program Files/PowerShell/7/pwsh.exe"
+      command: node lib/src/index.js stdio

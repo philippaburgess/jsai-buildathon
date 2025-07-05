@@ -1,0 +1,10 @@
+{
+    "mcp.servers": {
+        "mcp-mcpjw34m": {
+            "command": "npm",
+            "args": ["run", "start:stdio"],
+            "cwd": "./packages/node-os-mcp"
+        }
+    }
+}
+
