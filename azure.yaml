@@ -28,4 +28,4 @@ services:
     project: packages/node-os-mcp
     run: 
       command: npx tsx src/index.ts
-      shell: pwsh
+      shell: "C:/Program Files/PowerShell/7/pwsh.exe"
