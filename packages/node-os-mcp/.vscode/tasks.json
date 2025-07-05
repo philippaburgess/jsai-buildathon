@@ -92,7 +92,7 @@
       "type": "command",
       "command": "ai-mlstudio.agentBuilder",
       "args": {
-        "initialMCPs": [ "local-server-node_os_mpc" ],
+        "initialMCPs": [ "local-server-node_os_mcp" ],
         "triggeredFrom": "vsc-tasks"
       }
     },

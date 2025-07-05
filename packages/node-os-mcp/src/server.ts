@@ -1,11 +1,13 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import * as os from "os";
 
+// Create server instance
 const server = new McpServer({
-    name: "node-os-mcp",
-    description: "A server that provides tools to get information about the operating system.",
-    version: "0.0.1",
+  name: "node-os-mcp",
+  description: "A server that provides tools to get information about the operating system.",
+  version: "0.0.1",
 });
+
 server.tool(
 "cpu_average_usage",
 "Get the average CPU usage percentage on the local machine",
@@ -82,26 +84,4 @@ async () => ({
     })
 );
 
-server.tool(
-  "get_weather",
-  "Returns random weather data for a given location",
-  { location: { type: "string", description: "Location to get weather for" } },
-  async ({ location }) => {
-    const conditions = [ "Sunny", "Rainy", "Cloudy", "Snowy" ];
-    const weather = {
-      location,
-      temperature: `${Math.floor(Math.random() * 80) + 10}°F`,
-      condition: conditions[Math.floor(Math.random() * conditions.length)],
-    };
-    return {
-      content: [
-        {
-          type: "text",
-          text: JSON.stringify(weather),
-        },
-      ],
-      isError: false
-    };
-  }
-);
 export { server };
